@@ -80,13 +80,11 @@ QUnit.module('Тестируем функцию chess', function () {
     });
 
     QUnit.test("Передача параметра не преобразуемого к числу", function (assert) {
-        const expected = null;
-        assert.strictEqual(chess('q'), expected);
+        assert.strictEqual(chess('q'), null);
     });
 
     QUnit.test("Передача пустого параметра", function (assert) {
-        const expected = null;
-        assert.strictEqual(chess(), expected);
+        assert.strictEqual(chess(), null);
     });
 
 });

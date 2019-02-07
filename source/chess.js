@@ -14,7 +14,7 @@ function chess(n) {
         return null
     }
 
-    if (parseInt(n) === 1) {
+    if (parseInt(n) <= 1) {
         return null;
     }
     let ret = String();
@@ -30,3 +30,4 @@ function chess(n) {
     }
     return ret;
 }
+

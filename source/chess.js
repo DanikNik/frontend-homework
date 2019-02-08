@@ -27,8 +27,8 @@ function chess(n) {
     let reverse_str = str => str.split("").reverse().join("");
     let string_arr = raw_string.match(re);
     if (n % 2 === 0) {
-        for (let i = 0; i < n; i ++){
-            if (i%2 !== 0){
+        for (let i = 0; i < n; i++) {
+            if (i % 2 !== 0) {
                 string_arr[i] = reverse_str(string_arr[i]);
             }
         }

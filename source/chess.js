@@ -37,4 +37,3 @@ function chess(n) {
     return string_arr.join('\n') + '\n';
 }
 
-console.log(chess(3));

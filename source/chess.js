@@ -20,20 +20,23 @@ function chess(n) {
     if (parseInt(n) <= 1) {
         return null;
     }
-    let raw_string = ''.padEnd(n * n, "* ");
+    let raw_string = ''.padEnd(n * n, '* ');
     let re = new RegExp('.{' + n + '}', 'g');
 
 
-    let reverse_str = str => str.split("").reverse().join("");
+    let reverse_str = str => str.split('').reverse().join('');
     let string_arr = raw_string.match(re);
     if (n % 2 === 0) {
-        for (let i = 0; i < n; i++) {
-            if (i % 2 !== 0) {
-                string_arr[i] = reverse_str(string_arr[i]);
+        string_arr = string_arr.map((value, index, array) => {
+            if(index % 2 !== 0) {
+                return reverse_str(string_arr[index]);
             }
-        }
+            return string_arr[index];
+        });
     }
 
     return string_arr.join('\n') + '\n';
 }
 
+
+console.log(chess(8));
